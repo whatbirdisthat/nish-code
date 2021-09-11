@@ -2,37 +2,89 @@
 
 <head>
 <title>Lesson 1</title>
+
+<script>
+function calculate() {
+    var my1 = document.getElementById('quantity').value;
+    var my2 = document.getElementById('unitprice').value;
+    var result = document.getElementById('total');
+
+  }
+</script>
+
+<style type=text/css>
+    .product_title{
+    background-color:grey;
+    }
+    .product_table{
+    background-color:black;
+    }
+
+    div{
+        background-color:grey;
+        border:1px solid black;
+    }
+
+    table{
+        background-color:red;
+        text-align: center;
+    }
+
+    th{
+    border: 1px solid grey;
+    background-color:silver;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    }
+
+    tr, td{
+    background-color:white;
+    border: 1px solid grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+ 
+</style>
 </head>
 
 <body>
-<h1>Homework</h1>
+<h1>Lesson 1 - Homework</h1>
 
-<p>
-    Product Table
-</p>
+<div class="product_title">
+<h2>
+    PRODUCT TABLE
+</h2>
+</div>
 
+<div class="product_table">
 <table>
     <tr>
         <th>PRODUCT</th>
         <th>QUANTITY</th>
         <th>UNIT PRICE</th>
+        <th>TOTAL</th>
     </tr>
     <tr>
         <td>Hoodies</td>
         <td>1</td>
         <td>$19.99</td>
+        <td></td>
     </tr>
     <tr>
         <td>Sweatshirts</td>
         <td>3</td>
         <td>$14.99</td>
+        <td></td>
     </tr>
     <tr>
         <td>T-Shirts</td>
         <td>9</td>
         <td>$9.99</td>
+        <td></td>
     </tr>
 </table>
+</div>
 
 </body>
 
