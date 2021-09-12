@@ -11,7 +11,6 @@
             "UNIT PRICE",
             "TOTAL"
         ];
-
         // JAVASCRIPT OBJECT NOTATION
         // JSON
         let shoppingCart = {
@@ -19,9 +18,9 @@
                 {
                     product_name: "Hoodies",
                     quantity: 1,
-                    unit_price: 19.99               
+                    unit_price: 19.99
                 },
-            
+
                 {
                     product_name: "Sweathshirts",
                     quantity: 3,
@@ -34,10 +33,23 @@
                     quantity: 9,
                     unit_price: 9.99
                 }
-            
-            
+
+
             ]
         };
+
+
+        let theActualItems = shoppingCart.items;
+
+        theActualItems.forEach(
+            (item) => console.log(item.product_name)
+        );
+
+        //bonus content!
+        theActualItems.map(
+            console.log
+        );
+
 
     </script>
 
