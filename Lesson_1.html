@@ -44,11 +44,26 @@
         theActualItems.forEach(
             (item) => console.log(item.product_name)
         );
-
+        console.log("----------------")
         //bonus content!
         theActualItems.map(
             console.log
         );
+
+
+        // theActualItems.forEach(
+        //     (item) => document.write("<pre>" + item.product_name + "</pre>")
+        // );
+
+
+        const tableRow = (item) => document.write('<tr>' + '<td>' + item.product_name + '</td>' + '<td>' + item.quantity + '</td>' + '<td>' + item.unit_price + '</td>' + '</tr>')
+
+        document.write('<table>');
+        theActualItems.map(
+            tableRow
+        );
+        document.write('</table>');
+
 
 
     </script>
