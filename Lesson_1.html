@@ -7,8 +7,9 @@
 function calculate() {
     var quantity = document.getElementById('quantity').value;
     var unitprice = document.getElementById('unitprice').value;
-    let sum = quantity * unitprice;
-    console.log(sum);
+   
+   // let sum = quantity * unitprice;
+   // console.log(sum);
   }
 </script>
 
@@ -18,6 +19,10 @@ function calculate() {
     }
     .product_table{
     background-color:black;
+    }
+
+    .product_name{
+    background-color:aliceblue;
     }
 
     div{
@@ -66,19 +71,19 @@ function calculate() {
         <th>TOTAL</th>
     </tr>
     <tr>
-        <td>Hoodies</td>
+        <td class="product_name">Hoodies</td>
         <td>1</td>
         <td>$19.99</td>
         <td></td>
     </tr>
     <tr>
-        <td>Sweatshirts</td>
+        <td class="product_name">Sweatshirts</td>
         <td>3</td>
         <td>$14.99</td>
         <td></td>
     </tr>
     <tr>
-        <td>T-Shirts</td>
+        <td class="product_name">T-Shirts</td>
         <td>9</td>
         <td>$9.99</td>
         <td></td>
