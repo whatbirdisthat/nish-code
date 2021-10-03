@@ -3,6 +3,9 @@
 <head>
     <title>Lesson 1</title>
 
+    <!-- Read up on the LINK tag for info on these weirdness -->
+    <link rel="stylesheet" href="Lesson_1.css" />
+
     <script>
 
         let listOfColumnHeadings = [
@@ -41,72 +44,9 @@
 
         let theActualItems = shoppingCart.items;
 
-        theActualItems.forEach(
-            (item) => console.log(item.product_name)
-        );
-        console.log("----------------")
-        //bonus content!
-        theActualItems.map(
-            console.log
-        );
-
-
-        // theActualItems.forEach(
-        //     (item) => document.write("<pre>" + item.product_name + "</pre>")
-        // );
-
-
-        const tableRow = (item) => document.write('<tr>' + '<td>' + item.product_name + '</td>' + '<td>' + item.quantity + '</td>' + '<td>' + item.unit_price + '</td>' + '</tr>')
-
-        document.write('<table>');
-        theActualItems.map(
-            tableRow
-        );
-        document.write('</table>');
-
-
+        const tableRow = (item) => ('<tr>' + '<td>' + item.product_name + '</td>' + '<td>' + item.quantity + '</td>' + '<td>' + item.unit_price + '</td>' + '</tr>')
 
     </script>
-
-    <style type=text/css>
-        .product_title {
-            background-color: grey;
-        }
-
-        .product_table {
-            background-color: black;
-        }
-
-        .product_name {
-            background-color: aliceblue;
-        }
-
-        div {
-            background-color: grey;
-            border: 1px solid black;
-        }
-
-        table {
-            background-color: red;
-            text-align: center;
-        }
-
-        th {
-            border: 1px solid grey;
-            background-color: silver;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: left;
-        }
-
-        tr,
-        td {
-            background-color: white;
-            border: 1px solid grey;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -116,38 +56,21 @@
         <h2>
             PRODUCT TABLE.
         </h2>
+        <table id="the_table"></table>
     </div>
 
-    <div class="product_table">
-        <table>
-            <tr>
-                <th>PRODUCT NAME</th>
-                <th>QUANTITY</th>
-                <th>UNIT PRICE</th>
-                <th>TOTAL</th>
-            </tr>
-            <tr>
-                <td class="product_name">Hoodies</td>
-                <td>1</td>
-                <td>$19.99</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="product_name">Sweatshirts</td>
-                <td>3</td>
-                <td>$14.99</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="product_name">T-Shirts</td>
-                <td>9</td>
-                <td>$9.99</td>
-                <td></td>
-            </tr>
-        </table>
-
-    </div>
 
 </body>
+<script>
+
+    var pl = window.document.getElementById("the_table");
+    var theHTML =
+        theActualItems.map(
+            tableRow
+        );
+    console.log(theHTML);
+    pl.innerHTML = theHTML;
+
+</script>
 
 </html>

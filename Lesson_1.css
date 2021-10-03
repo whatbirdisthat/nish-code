@@ -1,0 +1,45 @@
+.product_title {
+    background-color: grey;
+}
+
+.product_table {
+    background-color: black;
+}
+
+.product_name {
+    background-color: aliceblue;
+}
+
+div {
+    background-color: grey;
+    border: 1px solid black;
+}
+
+table {
+    background-color: red;
+    text-align: center;
+}
+
+th {
+    border: 1px solid grey;
+    background-color: silver;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+tr,
+td {
+    background-color: white;
+    border: 1px solid grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#product_list {
+    border-radius: 4pt;
+    border-color: black;
+    padding: 8pt;
+    margin-top: 24pt;
+    font-size: 16pt;
+}
