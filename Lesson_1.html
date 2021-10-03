@@ -6,65 +6,14 @@
     <!-- Read up on the LINK tag for info on these weirdness -->
     <link rel="stylesheet" href="Lesson_1.css" />
 
-    <script>
-
-        let listOfColumnHeadings = [
-            "PRODUCT NAME",
-            "QUANTITY",
-            "UNIT PRICE",
-            "TOTAL"
-        ];
-        // JAVASCRIPT OBJECT NOTATION
-        // JSON
-        let shoppingCart = {
-            items: [
-                {
-                    product_name: "Hoodies",
-                    quantity: 1,
-                    unit_price: 19.99
-                },
-
-                {
-                    product_name: "Sweathshirts",
-                    quantity: 3,
-                    unit_price: 14.99
-                },
-
-
-                {
-                    product_name: "T-shirts",
-                    quantity: 9,
-                    unit_price: 9.99
-                }
-
-            ]
-        };
-
-
-        let theActualItems = shoppingCart.items;
-
-        const tableRow = (item) => (
-            '<tr>'
-            + '<td>' + item.product_name + '</td>'
-            + '<td>' + item.quantity + '</td>'
-            + '<td>' + item.unit_price + '</td>'
-            + '<td>' + (item.unit_price * item.quantity) + '</td>'
-            + '</tr>'
-        );
-
-        const printThings = () => {
-            var pl = window.document.getElementById("the_table");
-            var theHTML =
-                theActualItems.map(
-                    tableRow
-                );
-            pl.innerHTML = theHTML;
-        }
-
+    <script lang="JAVASCRIPT" src="Lesson_1.js">
     </script>
+
 </head>
 
-<body onload="printThings()">
+<!-- have a look at the "onload" event on HTML body-->
+
+<body onload="printThings();">
     <h1>Lesson 1 - Homework</h1>
 
     <div class="product_title">
