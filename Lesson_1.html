@@ -37,19 +37,34 @@
                     unit_price: 9.99
                 }
 
-
             ]
         };
 
 
         let theActualItems = shoppingCart.items;
 
-        const tableRow = (item) => ('<tr>' + '<td>' + item.product_name + '</td>' + '<td>' + item.quantity + '</td>' + '<td>' + item.unit_price + '</td>' + '</tr>')
+        const tableRow = (item) => (
+            '<tr>'
+            + '<td>' + item.product_name + '</td>'
+            + '<td>' + item.quantity + '</td>'
+            + '<td>' + item.unit_price + '</td>'
+            + '<td>' + (item.unit_price * item.quantity) + '</td>'
+            + '</tr>'
+        );
+
+        const printThings = () => {
+            var pl = window.document.getElementById("the_table");
+            var theHTML =
+                theActualItems.map(
+                    tableRow
+                );
+            pl.innerHTML = theHTML;
+        }
 
     </script>
 </head>
 
-<body>
+<body onload="printThings()">
     <h1>Lesson 1 - Homework</h1>
 
     <div class="product_title">
@@ -58,19 +73,6 @@
         </h2>
         <table id="the_table"></table>
     </div>
-
-
 </body>
-<script>
-
-    var pl = window.document.getElementById("the_table");
-    var theHTML =
-        theActualItems.map(
-            tableRow
-        );
-    console.log(theHTML);
-    pl.innerHTML = theHTML;
-
-</script>
 
 </html>
